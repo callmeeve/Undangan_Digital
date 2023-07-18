@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:audioplayers/audioplayers.dart';
 import 'package:undangan_digital/widgets/custom_divider.dart';
 import 'package:undangan_digital/widgets/gallery.dart';
 import 'package:undangan_digital/widgets/introduction.dart';
@@ -14,26 +13,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  late final AudioPlayer audioPlayer;
-
-  @override
-  void initState() {
-    super.initState();
-    audioPlayer = AudioPlayer();
-    playBackgroundMusic();
-  }
-
-  Future<void> playBackgroundMusic() async {
-    await audioPlayer.play(UrlSource('assets/sound.mp3'));
-  }
-
-  @override
-  void dispose() {
-    audioPlayer.stop();
-    audioPlayer.dispose();
-    super.dispose();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -14,6 +14,65 @@ class Introduction extends StatelessWidget {
       ? await launch(_googleFormUrl)
       : throw 'Could not launch $_googleFormUrl';
 
+  Widget _buildName(String desc, father, mother, name) {
+    return Center(
+      child: Column(
+        children: [
+          Text(
+            desc,
+            style: const TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Text(
+            name,
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          const Text(
+            "Anak dari",
+            style: TextStyle(fontSize: 14),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Column(
+                children: [
+                  Text(
+                    father,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  Text(
+                    mother,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -35,7 +94,21 @@ class Introduction extends StatelessWidget {
               fontSize: 20,
             ),
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 50),
+          _buildName(
+            'Groom',
+            'Suharno (Alm)',
+            'Tin Sukesi',
+            'Lutfi Arisandi',
+          ),
+          const SizedBox(height: 30),
+          _buildName(
+            'Bride',
+            'Hariyanto Arifin',
+            'Siti Shohifah',
+            'Lailis Wahyuni',
+          ),
+          const SizedBox(height: 50),
           const AutoSizeText(
             '“Dan segala sesuatu Kami Ciptakan Berpasang-pasangan supaya kamu mengingat kebesaran Allah.” (QS Az-Zariyat: 49)',
             textAlign: TextAlign.center,

@@ -13,14 +13,13 @@ class Roadmap extends StatefulWidget {
 
 class _RoadmapState extends State<Roadmap> {
   // ignore: non_constant_identifier_names
-  final API_KEY = ""; // Please insert your API KEY
 
   Widget getMap() {
     // ignore: undefined_prefixed_name
     ui.platformViewRegistry.registerViewFactory('iframe', (int viewId) {
       var iframe = html.IFrameElement();
       iframe.src =
-          'https://www.google.com/maps/embed/v1/place?key=$API_KEY&q=Museum Wedding Hall'; // embedded google map url
+          'https://www.google.com/maps/embed?pb=!3m2!1sen!2sid!4v1689653097373!5m2!1sen!2sid!6m8!1m7!1sb-qPgQj8X1TKsC1hxDM1sw!2m2!1d-8.195214298578312!2d114.3758752387169!3f288.84146753197206!4f6.674735802766207!5f0.7820865974627469'; // embedded google map url
       return iframe;
     });
 
@@ -49,7 +48,7 @@ class _RoadmapState extends State<Roadmap> {
           ),
           const SizedBox(height: 20),
           const Text(
-            'Museum Wedding Hall, 29 Itaewon-ro, Yongsan-gu, Seoul, \n3rd Floor Mugunghwa Hall',
+            'Kediaman Mempelai Pria, Jalan Lawu 2, Gang Senyum, Singotrunan, Kec. Banyuwangi, Kabupaten Banyuwangi, Jawa Timur',
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 15,

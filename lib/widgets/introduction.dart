@@ -28,7 +28,7 @@ class Introduction extends StatelessWidget {
             ),
           ),
           const AutoSizeText(
-            'Invitation',
+            'Undangan',
             style: TextStyle(
               color: Color.fromRGBO(41, 82, 56, 100),
               fontWeight: FontWeight.bold,
@@ -44,15 +44,6 @@ class Introduction extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 20),
-          const AutoSizeText(
-            'RSVP',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Color.fromRGBO(41, 82, 56, 100),
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-            ),
-          ),
           const AutoSizeText(
             'Silahkan Konfirmasi Kehadiran Anda.',
             textAlign: TextAlign.center,

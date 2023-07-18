@@ -10,12 +10,12 @@ class Welcome extends StatelessWidget {
       child: Align(
         alignment: Alignment.center,
         child: Container(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(30.0),
           decoration: BoxDecoration(
             color: const Color(0xFFFFFFFF).withOpacity(0.75),
           ),
           child: const AutoSizeText(
-            'Tasyakuran\nPernikahan\n\nLutfi\n&\nLaylis',
+            'Tasyakuran Pernikahan\n\nLutfi & Laylis',
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 20.0,
@@ -36,7 +36,7 @@ class Welcome extends StatelessWidget {
     return Column(
       children: [
         const Text(
-          'Jumat, 14 Juli 2023, 12:30 PM',
+          'Minggu, 6 Agustus 2023, 10:00 - 14:00 WIB',
           style: TextStyle(fontSize: 18),
         ),
         const SizedBox(height: 10),
@@ -70,7 +70,7 @@ class Welcome extends StatelessWidget {
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.75,
                     child: Image.asset(
-                      'assets/images/2.jpeg',
+                      'assets/images/2.JPG',
                       fit: BoxFit.fitWidth,
                       width: double.infinity,
                     ),

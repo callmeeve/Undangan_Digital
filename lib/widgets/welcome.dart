@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 
 class Welcome extends StatelessWidget {
-  const Welcome({super.key});
+  const Welcome({Key? key}) : super(key: key);
 
   Widget _buildTitleText() {
     return Positioned.fill(
